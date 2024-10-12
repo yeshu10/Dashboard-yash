@@ -12,10 +12,12 @@ body {
     background-color: #fff;
     color: #000;
     border: 2px solid rgb(238, 121, 140);
-    padding: 20px;
-    width: 320px;
+    padding: 50px;
+    width: 350px;
     text-align: center;
+  
 }
+
 
 .main-heading {
     font-size: 1.5rem;
@@ -107,6 +109,8 @@ label {
     padding: 10px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    padding: 20px;
+    width: 300px;
 }
 
 .delivery-info {
@@ -115,8 +119,13 @@ label {
     align-items: center; /* Vertically centers the items */
 }
 
+.free-delivery {
+    color: rgb(238, 121, 140);
+}
+
 .free-delivery, .delivery-info p {
-    margin: 0; /* Remove any default margin if needed */
+    margin: 10; /* Remove any default margin if needed */
+    
 }
 
 .box-header {
@@ -172,6 +181,7 @@ footer {
     margin-top: 10px;
     font-size: 0.8rem;
     color: #999;
+    text-align: right;
 }
 
 /* Hide the default radio button */
