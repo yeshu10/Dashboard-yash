@@ -21,6 +21,10 @@ body {
     font-size: 1.5rem;
     color: rgb(238, 121, 140);
     padding: 10px;
+    position: relative; /* Needed for absolute positioning of the lines */
+    display: flex;
+    align-items: center; /* Vertically center the text and the lines */
+    justify-content: center; /* Center the heading text */
 }
 
 .main-heading::before,
@@ -28,18 +32,22 @@ body {
     content: "";
     position: absolute;
     top: 50%;
-    width: 100px; /* Length of the lines */
-    height:4 px;  /* Height of the lines */
-    background-color: #000; /* Color of the lines */
+    width: 70px; /* Adjust the length of the lines */
+    height: 1px;  /* Thickness of the lines */
+    background-color: #817f7f; /* Color of the lines */
+    transform: translateY(-50%); /* Vertically center the lines */
 }
 
 .main-heading::before {
-    left: 0;
+    left: 0; /* Line on the left side */
+    margin-right: 10px; /* Space between the line and the text */
 }
 
 .main-heading::after {
-    right: 0;
+    right: 0; /* Line on the right side */
+    margin-left: 10px; /* Space between the line and the text */
 }
+
 
 
 label {
@@ -74,9 +82,6 @@ label {
     align-items: center; /* Vertically centers the items */
 }
 
-.free-delivery {
-    color: rgb(238, 121, 140);  
-}
 
 .free-delivery, .delivery-info p {
      
@@ -111,49 +116,9 @@ label {
 }
 
 .box-content {
-    display: flex;
-    flex-direction: column;
+    display: none;
     margin-top: 10px;
 }
-
-.label-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.label-row label {
-    width: 45%; /* Ensures labels take the same space as select elements */
-    font-weight: bold;
-}
-
-
-input[type="radio"]:checked + label::before {
-    background-color: red; /* Fill the custom radio button with red */
-}
-
-/* Optional: Change the border color when checked */
-input[type="radio"]:checked + label::before {
-    border-color: red; /* Change the border color if needed */
-}
-
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.row span {
-    margin-right: 10px;
-    font-weight: bold;
-}
-
-.row select {
-    width: 45%; /* Same width as labels */
-    padding: 5px;
-}
-
 
 .add-to-cart {
     background-color: #f07797;
@@ -170,7 +135,6 @@ footer {
     font-size: 0.8rem;
     color: #999;
 }
-
 /* Hide the default radio button */
 input[type="radio"] {
     appearance: none; /* Hide default radio button appearance */
@@ -187,8 +151,8 @@ input[type="radio"] {
 
 /* Style for selected radio button */
 input[type="radio"]:checked {
-    background-color: white; /* Red background when selected */
-    border-color:  #f07797; /* Border color also changes to red */
+    background-color:white; /* Red background when selected */
+    border-color: #f07797; /* Border color also changes to red */
 }
 
 /* Optional: Add a dot in the middle when selected */
@@ -198,7 +162,7 @@ input[type="radio"]:checked::after {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #f07797;
+    background-color: #f07797; /* White dot inside */
     position: absolute;
     top: 50%;
     left: 50%;
