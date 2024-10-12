@@ -151,9 +151,11 @@ label {
     color: #888;
 }
 
+
+
 .box-content {
-    display: none;
-    margin-top: 10px;
+    margin-right: 80px; /* Adjust left margin to be under the label */
+    width: auto; /* Auto width to prevent it from stretching the full width */
 }
 
 .add-to-cart {
