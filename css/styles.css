@@ -54,6 +54,39 @@ label {
     display: inline-block;
     font-size: 1rem;
 }
+.box-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.label-row label {
+    width: 45%; /* Ensures labels take the same space as select elements */
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.row span {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.row select {
+    width: 45%; /* Same width as labels */
+    padding: 5px;
+}
 
 .price-info {
     display: flex;
@@ -76,6 +109,7 @@ label {
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
+
 .delivery-info {
     display: flex;
     justify-content: space-between; /* Adjusts the space between the two items */
@@ -167,4 +201,7 @@ input[type="radio"]:checked::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Center the dot */
+}
+#box2 .box-content {
+    display: block;
 }
