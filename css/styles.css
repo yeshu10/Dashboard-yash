@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid rgb(238, 121, 140);
+    padding: 20px;
+    width: 320px;
+    text-align: center;
+}
+
+.main-heading {
+    font-size: 1.5rem;
+    color: rgb(238, 121, 140);
+    padding: 10px;
+}
+
+.main-heading::before,
+.main-heading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100px; /* Length of the lines */
+    height:4 px;  /* Height of the lines */
+    background-color: #000; /* Color of the lines */
+}
+
+.main-heading::before {
+    left: 0;
+}
+
+.main-heading::after {
+    right: 0;
+}
+
+
+label {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.price-info {
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: flex-start; /* Align content to the left */
+    margin-top: 5px; /* Adjust spacing between "1 Unit" and "Standard Price" */
+}
+
+.discount {
+    color: white;
+    font-weight: bold;
+    margin-top: 2px; /* Adjust spacing between "Standard Price" and "10% Off" */
+    background-color:rgb(238, 121, 140);
+}
+
+.box {
+    border: 2px solid #ccc;
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.delivery-info {
+    display: flex;
+    justify-content: space-between; /* Adjusts the space between the two items */
+    align-items: center; /* Vertically centers the items */
+}
+
+.free-delivery {
+    color: rgb(238, 121, 140);  
+}
+
+.free-delivery, .delivery-info p {
+     
+    margin: 0; /* Remove any default margin if needed */
+}
+
+
+.box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag {
+    background-color:rgb(238, 121, 140);
+    color: #fff;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.original-price {
+    text-decoration: line-through;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.box-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.label-row label {
+    width: 45%; /* Ensures labels take the same space as select elements */
+    font-weight: bold;
+}
+
+
+input[type="radio"]:checked + label::before {
+    background-color: red; /* Fill the custom radio button with red */
+}
+
+/* Optional: Change the border color when checked */
+input[type="radio"]:checked + label::before {
+    border-color: red; /* Change the border color if needed */
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.row span {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.row select {
+    width: 45%; /* Same width as labels */
+    padding: 5px;
+}
+
+
+.add-to-cart {
+    background-color: #f07797;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* Hide the default radio button */
+input[type="radio"] {
+    appearance: none; /* Hide default radio button appearance */
+    -webkit-appearance: none; /* Webkit support */
+    -moz-appearance: none; /* Mozilla support */
+    width: 20px; /* Custom width */
+    height: 20px; /* Custom height */
+    border: 2px solid #ccc; /* Default border */
+    border-radius: 50%; /* Make it circular */
+    background-color: white; /* Default background color */
+    cursor: pointer; /* Pointer cursor for radio button */
+    position: relative; /* For custom styling */
+}
+
+/* Style for selected radio button */
+input[type="radio"]:checked {
+    background-color: white; /* Red background when selected */
+    border-color:  #f07797; /* Border color also changes to red */
+}
+
+/* Optional: Add a dot in the middle when selected */
+input[type="radio"]:checked::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f07797;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the dot */
+}
